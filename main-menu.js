@@ -1,16 +1,33 @@
 const { app, Menu } = require('electron');
 const isWindows = process.platform === 'win32';
+const { showMessage } = require('./dialogs.js');
 
-module.exports = {
-  setMainMenu
-};
+module.exports = { setMainMenu };
 
-function setMainMenu() {
+function setMainMenu(mainWindow) {
   // electron menus are defined as arrays of objects
   const template = [
     { 
       label: isWindows ? 'File' : app.getName(),
       submenu: [
+        {
+          label: 'Say Hello',
+          click() {
+            showMessage(mainWindow);
+          }
+        },
+        {
+          label: 'Save Memory Usage Info',
+          click() {
+
+          }
+        },
+        {
+          label: 'Open File',
+          click() {
+
+          }
+        },
         {
           label: isWindows ? 'Exit' : `Quit ${app.getName()}`,
           accelerator: isWindows ? 'Alt + F4' : 'CmdOrCtrl+Q',
