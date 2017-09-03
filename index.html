@@ -1,7 +1,14 @@
 <html>
   <head>
-    <title>Hello, World!</title>
+    <title>Electron Simple App!</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+  <body>
+    <h1>
+      You are running Electron version: <br />
+      <span id="version"></span>
+    </h1>
 
-  <h1>Hello, World</h1>
+    <script>require('./renderer.js');</script>
+  </body>
 </html>
