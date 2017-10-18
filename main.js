@@ -5,11 +5,7 @@ const { setMainMenu } = require('./main-menu.js');
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    show: false
+    height: 400, width: 400
   });
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html' ));
-  mainWindow.on('ready-to-show', () => {
-    mainWindow.show();
-  });
-  setMainMenu(mainWindow);
 });
