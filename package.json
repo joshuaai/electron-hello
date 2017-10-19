@@ -1,17 +1,26 @@
 {
-  "name": "HelloWorld",
+  "name": "electron-hello",
+  "productName": "Electron Hello",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Testing out Electron for Windows",
+  "main": "main.js",
   "scripts": {
     "start": "electron main.js",
+    "package": "build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joshua Ihejiamaizu",
   "license": "ISC",
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "electron-builder": "^19.37.2",
+    "electron-icon-maker-fix": "0.0.5"
+  },
+  "build": {
+    "appId": "com.joshuaai.ElectronHello",
+    "files": "!build-assets{/*}",
+    "forceCodeSigning": true
   }
 }

@@ -1,0 +1,1 @@
+signtool.exe verify "dist/win-x64\Electron Hell0.exe"
